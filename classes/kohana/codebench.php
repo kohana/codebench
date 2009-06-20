@@ -108,24 +108,19 @@ abstract class Kohana_Codebench {
 				}
 
 				// Stop and read the timer
-				Profiler::stop($token);
 				$benchmark = Profiler::total($token);
-
-				// Temporary ugly workaround
-				$benchmark['time']   = $benchmark[0];
-				$benchmark['memory'] = $benchmark[1];
 
 				// Benchmark output specific to the current method and subject
 				$codebench['benchmarks'][$method]['subjects'][$subject_key] = array
 				(
 					'return' => $return,
-					'time'   => $benchmark['time'],
-					'memory' => $benchmark['memory'],
+					'time'   => $benchmark[0],
+					'memory' => $benchmark[1],
 				);
 
 				// Update method totals
-				$codebench['benchmarks'][$method]['time']   += $benchmark['time'];
-				$codebench['benchmarks'][$method]['memory'] += $benchmark['memory'];
+				$codebench['benchmarks'][$method]['time']   += $benchmark[0];
+				$codebench['benchmarks'][$method]['memory'] += $benchmark[1];
 			}
 		}
 
