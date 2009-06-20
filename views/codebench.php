@@ -205,11 +205,11 @@
 							<?php foreach ($benchmark['subjects'] as $subject_key => $subject) { ?>
 								<tr>
 									<td>
-										<strong class="help" title="(<?php echo gettype($codebench['subjects'][$subject_key]) ?>) <?php echo HTML::specialchars(var_export($codebench['subjects'][$subject_key])) ?>">
-											[<?php echo HTML::specialchars($subject_key) ?>] →
+										<strong class="help" title="(<?php echo gettype($codebench['subjects'][$subject_key]) ?>) <?php echo HTML::chars(var_export($codebench['subjects'][$subject_key])) ?>">
+											[<?php echo HTML::chars($subject_key) ?>] →
 										</strong>
 										<span class="quiet">(<?php echo gettype($subject['return']) ?>)</span>
-										<?php echo HTML::specialchars(var_export($subject['return'])) ?>
+										<?php echo HTML::chars(var_export($subject['return'])) ?>
 									</td>
 									<td class="numeric">
 										<span title="+<?php echo (int) $subject['percent']['fastest']['memory'] ?>% memory">
