@@ -19,7 +19,7 @@ class Controller_Codebench extends Kohana_Controller_Template {
 			$this->request->redirect('codebench/'.trim($_POST['class']));
 
 		// Pass the class name on to the view
-		$this->template->class = $class;
+		$this->template->class = (string) $class;
 
 		// Try to load the class, then run it
 		if (Kohana::auto_load($class) === TRUE)
