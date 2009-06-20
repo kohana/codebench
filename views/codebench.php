@@ -155,7 +155,7 @@
 
 	<form id="runner" method="post" action="<?php echo URL::site('codebench') ?>">
 		<h1>
-			<input name="class" type="text" value="<?php echo $class ?>" size="25" title="Name of the Codebench library to run" />
+			<input name="class" type="text" value="<?php echo ($class !== '') ? $class : 'Bench_' ?>" size="25" title="Name of the Codebench library to run" />
 			<input type="submit" value="Run" />
 			<?php if ( ! empty($class)) { ?>
 				<?php if (empty($codebench)) { ?>
