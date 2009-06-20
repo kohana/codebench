@@ -16,10 +16,10 @@ class Controller_Codebench extends Kohana_Controller_Template {
 	{
 		// Convert submitted class name to URI segment
 		if (isset($_POST['class']))
-			$this->request->redirect('codebench/'.strtolower(trim($_POST['class'])));
+			$this->request->redirect('codebench/'.trim($_POST['class']));
 
 		// Pass the class name on to the view
-		$this->template->class = $class = ucfirst(trim($class));
+		$this->template->class = $class;
 
 		// Try to load the class, then run it
 		if (Kohana::auto_load($class) === TRUE)
