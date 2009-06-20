@@ -247,8 +247,8 @@
 	<?php } ?>
 
 	<p id="footer">
-		Page executed in <strong><?php echo round(microtime(TRUE) - KOHANA_START_TIME, 2) ?>s</strong>
-		using <strong><?php echo Text::bytes(memory_get_usage(), 'MB') ?></strong> of memory.<br />
+		Page executed in <strong><?php echo round(microtime(TRUE) - KOHANA_START_TIME, 2) ?>&nbsp;s</strong>
+		using <strong><?php echo Text::widont(Text::bytes(memory_get_usage(), 'MB')) ?></strong> of memory.<br />
 		<a href="http://github.com/GeertDD/kohana-codebench">Codebench</a>, a <a href="http://www.kohanaphp.com/">Kohana</a> module
 		by <a href="http://www.geertdedeckere.be/article/introducing-codebench">Geert De Deckere</a>.
 	</p>
