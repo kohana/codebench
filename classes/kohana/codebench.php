@@ -2,7 +2,7 @@
 /**
  * Codebench — A benchmarking module.
  *
- * @package    Kohana
+ * @package    Benchmarking
  * @author     Kohana Team
  * @copyright  (c) 2009 Kohana Team
  * @license    http://kohanaphp.com/license.html

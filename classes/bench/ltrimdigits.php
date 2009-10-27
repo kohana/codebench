@@ -1,6 +1,7 @@
 <?php defined('SYSPATH') OR die('No direct access allowed.');
 /**
- * @author  Geert De Deckere <geert@idoe.be>
+ * @package  Benchmarking
+ * @author   Geert De Deckere <geert@idoe.be>
  */
 class Bench_Ltrimdigits extends Codebench {
 
