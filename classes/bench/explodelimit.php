@@ -1,5 +1,8 @@
 <?php defined('SYSPATH') or die('No direct script access.');
-
+/**
+ * @package  Benchmarking
+ * @author   Geert De Deckere <geert@idoe.be>
+ */
 class Bench_ExplodeLimit extends Codebench {
 
 	public $description =

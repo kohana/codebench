@@ -1,5 +1,8 @@
 <?php defined('SYSPATH') OR die('No direct access allowed.');
-
+/**
+ * @package  Benchmarking
+ * @author   Geert De Deckere <geert@idoe.be>
+ */
 class Bench_ValidColor extends Codebench {
 
 	public $description =
