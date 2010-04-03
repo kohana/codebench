@@ -1,12 +1,10 @@
 <?php defined('SYSPATH') OR die('No direct access allowed.');
-/**
- * @author  Geert De Deckere <geert@idoe.be>
- */
-class Bench_Arrcallback extends Codebench {
+
+class Bench_ArrCallback extends Codebench {
 
 	public $description =
 		'Parsing <em>command[param,param]</em> strings in <code>Arr::callback()</code>:
-		http://github.com/shadowhand/kohana/commit/c3aaae849164bf92a486e29e736a265b350cb4da#L0R127';
+		 http://github.com/shadowhand/kohana/commit/c3aaae849164bf92a486e29e736a265b350cb4da#L0R127';
 
 	public $loops = 10000;
 

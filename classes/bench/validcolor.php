@@ -1,17 +1,15 @@
 <?php defined('SYSPATH') OR die('No direct access allowed.');
-/**
- * @author  Geert De Deckere <geert@idoe.be>
- */
-class Bench_Validcolor extends Codebench {
+
+class Bench_ValidColor extends Codebench {
 
 	public $description =
 		'Optimization for <code>Validate::color()</code>.
-		See: http://forum.kohanaphp.com/comments.php?DiscussionID=2192.
+		 See: http://forum.kohanaphp.com/comments.php?DiscussionID=2192.
 
-		Note that the methods with an <em>_invalid</em> suffix contain flawed regexes and should be
-		completely discarded. I left them in here for educational purposes, and to remind myself
-		to think harder and test more thoroughly. It can\'t be that I only found out so late in
-		the game. For the regex explanation have a look at the forum topic mentioned earlier.';
+		 Note that the methods with an <em>_invalid</em> suffix contain flawed regexes and should be
+		 completely discarded. I left them in here for educational purposes, and to remind myself
+		 to think harder and test more thoroughly. It can\'t be that I only found out so late in
+		 the game. For the regex explanation have a look at the forum topic mentioned earlier.';
 
 	public $loops = 10000;
 

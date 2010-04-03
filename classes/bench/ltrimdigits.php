@@ -1,8 +1,6 @@
 <?php defined('SYSPATH') OR die('No direct access allowed.');
-/**
- * @author  Geert De Deckere <geert@idoe.be>
- */
-class Bench_Ltrimdigits extends Codebench {
+
+class Bench_LtrimDigits extends Codebench {
 
 	public $description = 'Chopping off leading digits: regex vs ltrim.';
 
