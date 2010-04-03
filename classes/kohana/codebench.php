@@ -57,7 +57,7 @@ abstract class Kohana_Codebench {
 	public function run()
 	{
 		// Array of all methods to loop over
-		$methods = array_filter(get_class_methods($this), array($this, 'method_filter'));
+		$methods = array_filter(get_class_methods($this), array($this, '_method_filter'));
 
 		// Make sure the benchmark runs at least once,
 		// also if no subject data has been provided.
@@ -160,8 +160,8 @@ abstract class Kohana_Codebench {
 			$method['percent']['slowest']['memory'] = $method['memory'] / $slowest_method['memory'] * 100;
 
 			// Assign a grade for time and memory to each method
-			$method['grade']['time']   = $this->grade($method['percent']['fastest']['time']);
-			$method['grade']['memory'] = $this->grade($method['percent']['fastest']['memory']);
+			$method['grade']['time']   = $this->_grade($method['percent']['fastest']['time']);
+			$method['grade']['memory'] = $this->_grade($method['percent']['fastest']['memory']);
 
 			// Percentage calculations for subjects
 			foreach ($method['subjects'] as & $subject)
@@ -173,8 +173,8 @@ abstract class Kohana_Codebench {
 				$subject['percent']['slowest']['memory'] = $subject['memory'] / $slowest_subject['memory'] * 100;
 
 				// Assign a grade letter for time and memory to each subject
-				$subject['grade']['time']   = $this->grade($subject['percent']['fastest']['time']);
-				$subject['grade']['memory'] = $this->grade($subject['percent']['fastest']['memory']);
+				$subject['grade']['time']   = $this->_grade($subject['percent']['fastest']['time']);
+				$subject['grade']['memory'] = $this->_grade($subject['percent']['fastest']['memory']);
 			}
 		}
 
@@ -188,7 +188,7 @@ abstract class Kohana_Codebench {
 	 * @param   string   method name
 	 * @return  boolean
 	 */
-	protected function method_filter($method)
+	protected function _method_filter($method)
 	{
 		// Only benchmark methods with the "bench" prefix
 		return (substr($method, 0, 5) === 'bench');
@@ -200,7 +200,7 @@ abstract class Kohana_Codebench {
 	 * @param   integer|double  score
 	 * @return  string  grade letter
 	 */
-	protected function grade($score)
+	protected function _grade($score)
 	{
 		foreach ($this->grades as $max => $grade)
 		{
