@@ -37,7 +37,7 @@
 		#bench > li { margin:6px 0; }
 		#bench h2 { position:relative; margin:0; padding:2px; background:#ccc; border:1px solid #999; cursor:pointer; -moz-border-radius:3px; -webkit-border-radius:3px; }
 		#bench h2 > span { display:block; min-width:1px; height:33px; background:#fff; -moz-border-radius:2px; -webkit-border-radius:2px; }
-		#bench h2 .method { position:absolute; top:6px; left:8px; }
+		#bench h2 .method { position:absolute; top:6px; left:8px; text-shadow:0 -1px 0 rgba(255,255,255,0.6); }
 		#bench h2 .method:before { content:'▸ '; }
 		#bench h2 .percent { position:absolute; top:6px; right:6px; padding:0 4px; background:#000; color:#fff; font-weight:normal; letter-spacing:0; -moz-border-radius:2px; -webkit-border-radius:2px; }
 		#bench h2:hover .method { left:10px; }
@@ -62,7 +62,7 @@
 		#bench .numeric span span { position:absolute; top:0; right:0; min-width:1px; background:#ccc; -moz-border-radius:2px; -webkit-border-radius:2px; }
 		#bench .numeric span span span { top:0; right:0; background:none; }
 		#bench tbody tr:hover { background:#fff; }
-		#bench tbody tr.highlight { background-image:url(data:image/gif;base64,R0lGODlhBAAEAIABAP///wAAACH5BAEAAAEALAAAAAAEAAQAAAIFRGComQUAOw==); }
+		#bench tbody tr.highlight { background:#ffc; }
 
 		/* Footer */
 		#footer { margin-top:2em; padding-top:1em; border-top:1px solid #ccc; color:#999; }
@@ -74,7 +74,7 @@
 		.help { cursor:help; }
 	</style>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			// Insert "Toggle All" button
@@ -249,7 +249,7 @@
 	<p id="footer">
 		Page executed in <strong><?php echo round(microtime(TRUE) - KOHANA_START_TIME, 2) ?>&nbsp;s</strong>
 		using <strong><?php echo Text::widont(Text::bytes(memory_get_usage(), 'MB')) ?></strong> of memory.<br />
-		<a href="http://github.com/GeertDD/kohana-codebench">Codebench</a>, a <a href="http://www.kohanaphp.com/">Kohana</a> module
+		<a href="http://github.com/kohana/codebench">Codebench</a>, a <a href="http://www.kohanaphp.com/">Kohana</a> module
 		by <a href="http://www.geertdedeckere.be/article/introducing-codebench">Geert De Deckere</a>.
 	</p>
 
