@@ -29,7 +29,7 @@ class Bench_DateSpan extends Codebench {
 	public static function bench_span_original($remote, $local = NULL, $output = 'years,months,weeks,days,hours,minutes,seconds')
 	{
 		// Array with the output formats
-		$output = preg_split('/[^a-z]+/', strtolower((string) $output));
+		$output = preg_split('/[^a-z]+/', strtolower( (string) $output));
 
 		// Invalid output
 		if (empty($output))
@@ -116,7 +116,7 @@ class Bench_DateSpan extends Codebench {
 	public static function bench_span_use_array($remote, $local = NULL, $output = 'years,months,weeks,days,hours,minutes,seconds')
 	{
 		// Array with the output formats
-		$output = preg_split('/[^a-z]+/', strtolower((string) $output));
+		$output = preg_split('/[^a-z]+/', strtolower( (string) $output));
 
 		// Invalid output
 		if (empty($output))
