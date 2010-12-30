@@ -14,7 +14,9 @@
 <head>
 
 	<meta charset="utf-8" />
-	<title><?php if ($class !== '') echo $class, ' · ' ?>Codebench</title>
+	<title><?php if ($class !== ''): ?>
+			<?php echo $class, ' · ' ?>
+		<?php endif; ?>Codebench</title>
 
 	<style>
 		/* General styles*/
