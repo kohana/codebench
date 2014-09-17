@@ -4,3 +4,7 @@ Icon?
 code_coverage
 *~
 *.swp
+composer.lock
+vendor/*
+koharness_bootstrap.php
+
